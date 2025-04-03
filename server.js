@@ -52,8 +52,9 @@ app.get('/', (req, res)=> {
 const personRouters = require('./routes/personRoutes');
 const menuItemRoutes = require('./routes/menuItemRoutes');
 
+//  localAuthMiddleware, 
 // Use the routers
-app.use('/person', localAuthMiddleware, personRouters);
+app.use('/person', personRouters);
 app.use('/menu',menuItemRoutes);
 
 
